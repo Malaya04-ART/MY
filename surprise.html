@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css"
+    <title></title>
+    <title>Valentines?</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-image: url(Backgrounds.png);
+            background-position: fill;
+            background-size: cover;
+            height: 100vh;
+            min-height: 100px;
+            font-family: 'Times New Roman', Times, serif;
+            position: relative;
+        }
+
+        /* Reserved space for navigation bar */
+        .Nav-Bar {
+            height: 80px;
+            display: flex;
+            justify-content: space-evenly;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        /* Text styling */
+        .text {
+            position: absolute;
+            color: bisque;
+            font-size: 20px;
+            font-weight: bold;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Placeholder for the navigation bar -->
+    <ul class="Nav-Bar">
+        <li><a href="HeSaidYes.html">Home</a></li>
+        <li><a href="Memories.html">Memories</a></li>
+        <li><a href="love.html">A Love Letter</a></li>
+        <li><a href="Count Down.html">Countdown</a></li>
+        <li><a href="surprise.html">Surprise</a></li>
+    </ul>
+
+    <script>
+        function createText() {
+            const text = document.createElement('div');
+            text.textContent = "I love you more!";
+            text.className = 'text';
+
+            // Random positions, leaving space for the navigation bar
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * (window.innerHeight - 50) + 50; // Offset by 50px
+
+            const size = Math.random() * 30 + 20;
+
+            text.style.left = `${x}px`;
+            text.style.top = `${y}px`;
+            text.style.fontSize = `${size}px`;
+
+            document.body.appendChild(text);
+        }
+
+        // Faster interval for text creation
+        setInterval(createText, 100);
+    </script>
+</body>
+</html>

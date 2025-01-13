@@ -1,0 +1,56 @@
+*
+{
+margin: 0;
+padding: 0;
+}
+
+body
+{
+background-color: black;
+font-family: 'Times New Roman', Times, serif;
+font-size: 3rem;
+color: whitesmoke;
+padding: 20px;
+}
+
+
+
+h2{
+    font-size: 2.5rem;
+
+}
+
+.Back{ 
+
+}
+  ul {
+      display: inline-flex;
+      list-style: none;
+      color: #000;
+  }
+  
+  ul li{
+      width: 20px;
+      margin: 7%;
+      padding: 17px;
+      
+  }
+  
+  ul li a{
+      text-decoration: none;
+      font-size: 3rem;
+      color: red;
+      padding: 11px 13px;
+      transition: 0.5s ease;
+  }
+  
+  ul li a:hover{
+      background-color: white;
+      color: red;
+      border-radius: 2px;
+  }
+  
+  ul li.activate a{
+      background-color: white;
+      color: red
+  }

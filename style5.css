@@ -1,0 +1,111 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    color: palevioletred;
+    padding: 20px;
+    background-image: url(Backgrounds.png);
+    background-size: cover;
+    background-position: fill;
+    height: 100vh;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Nav-Bar{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.Nav-Bar li {
+    list-style: none;
+
+}
+
+.Nav-Bar li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: red;
+    padding: 11px 13px;
+    transition: 0.5s ease;
+}
+
+.Nav-Bar li a:hover{
+    background-color: pink;
+    color: red;
+    border-radius: 2px;
+}
+
+.container{
+    flex: 1 auto;
+    padding-top: 25vh;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    background-color: bisque;
+    width: 80vw;
+    height: 50vh;
+    padding: 20px;
+    border-radius: 1rem;
+    display: flex;
+}
+
+.card div{
+    flex: 1 auto;
+}
+
+.cd-outer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+}
+
+.cd-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown {
+    display: flex;
+    flex-direction: row;
+}
+
+.countdown div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.countdown div .cd-text {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.countdown div .cd-unit {
+    font-weight: lighter;
+}
+
+.card img{
+    height: 100%;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img{
+    border-radius: 1rem;
+}

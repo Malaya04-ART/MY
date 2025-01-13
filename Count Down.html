@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style5.css">
+    <title>Valentine?</title>
+</head>
+<body>
+    <ul class="Nav-Bar">
+        <li><a href="HeSaidYes.html">Home</a></li>
+        <li><a href="Memories.html">Memories</a></li>
+        <li><a href="love.html">A Love Letter</a></li>
+        <li><a href="Count Down.html">Countdown</a></li>
+        <li><a href="surprise.html">Surprise</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="card">
+            <div class="cd-outer">
+                <h1>Countdown to Anniversary</h1>
+                <div class="cd-container">
+                    <div id="countdown" class="countdown">
+                    </div>
+                </div>
+
+            </div>
+           <div class="img-container">
+            <img src="Countdown img.png" alt="">
+           </div>
+        </div>
+    </div>
+    <script>
+        let countdown = document.getElementById('countdown')
+
+        function startcountdown(){
+            let currentDate = new Date()
+            let targetDate = new Date("2025-11-09 00:00:00")
+            let delta = targetDate.getTime() - currentDate.getTime()
+
+            let days = Math.floor(delta / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((delta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((delta % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((delta % (1000 * 60)) / 1000);
+
+            countdown.innerHTML = "";
+
+            let daysContainer = document.createElement("div");
+            let daysText = document.createElement("span");
+            daysText.innerText = days;
+            daysText.classList.add("cd-text");
+            daysContainer.appendChild(daysText);
+            let daysUnit = document.createElement("span");
+            daysUnit.innerText = "Days";
+            daysUnit.classList.add("cd-unit");
+            daysContainer.appendChild(daysUnit);
+            countdown.appendChild(daysContainer);
+
+            let hoursContainer = document.createElement("div");
+            let hoursText = document.createElement("span");
+            hoursText.innerText = hours;
+            hoursText.classList.add("cd-text");
+            hoursContainer.appendChild(hoursText);
+            let hoursUnit = document.createElement("span");
+            hoursUnit.innerText = "Hours";
+            hoursUnit.classList.add("cd-unit");
+            hoursContainer.appendChild(hoursUnit);
+            countdown.appendChild(hoursContainer);
+
+            let minutesContainer = document.createElement("div");
+            let minutesText = document.createElement("span");
+            minutesText.innerText = minutes;
+            minutesText.classList.add("cd-text");
+            minutesContainer.appendChild(minutesText);
+            let minutesUnit = document.createElement("span");
+            minutesUnit.innerText = "Minutes";
+            minutesUnit.classList.add("cd-unit");
+            minutesContainer.appendChild(minutesUnit);
+            countdown.appendChild(minutesContainer);
+
+            let secondsContainer = document.createElement("div");
+            let secondsText = document.createElement("span");
+            secondsText.innerText = seconds;
+            secondsText.classList.add("cd-text");
+            secondsContainer.appendChild(secondsText);
+            let secondsUnit = document.createElement("span");
+            secondsUnit.innerText = "Seconds";
+            secondsUnit.classList.add("cd-unit");
+            secondsContainer.appendChild(secondsUnit);
+            countdown.appendChild(secondsContainer);
+
+            setTimeout(startcountdown, 1000);
+        }
+
+        startcountdown();
+    </script>
+</body>
+</html>

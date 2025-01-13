@@ -1,0 +1,32 @@
+.Nav-Bar{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.Nav-Bar li {
+    list-style: none;
+
+}
+
+.Nav-Bar li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: red;
+    padding: 11px 13px;
+    transition: 0.5s ease;
+}
+
+.Nav-Bar li a:hover{
+    background-color: pink;
+    color: red;
+    border-radius: 2px;
+}
+
+  .header {
+    position: absolute;
+    top: 38vw;
+    
+    font-size: 3vw;
+  }
+ 

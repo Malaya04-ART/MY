@@ -1,0 +1,82 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color: palevioletred;
+    padding: 20px;
+    background-image: url(Backgrounds.png);
+    background-size: cover;
+    background-position: fill;
+    height: 100vh;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.center{
+    text-align: center;
+}
+
+h1{
+    color: bisque;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    position: absolute;
+        bottom: 19%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+}
+
+audio{
+    position: absolute;
+    left: 57.5%;
+    bottom: 12%;
+}
+
+p{
+    position: absolute;
+    left: 50%;
+    color: palevioletred;
+}
+
+.p{
+    position: absolute;
+    background-color: antiquewhite;
+    width: 900px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.Nav-Bar{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.Nav-Bar li {
+    list-style: none;
+
+}
+
+.Nav-Bar li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: red;
+    padding: 11px 13px;
+    transition: 0.5s ease;
+}
+
+.Nav-Bar li a:hover{
+    background-color: pink;
+    color: red;
+    border-radius: 2px;
+}
